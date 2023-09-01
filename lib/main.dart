@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:lesson_app/app_block.dart';
 import 'package:lesson_app/app_evetns.dart';
+import 'package:lesson_app/pages/welcome/bloc/welcome_blocs.dart';
 import 'package:lesson_app/pages/welcome/welcome.dart';
 
 import 'app_states.dart';
@@ -17,8 +18,8 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return BlocProvider<AppBlocs>(
-      create: (context) => AppBlocs(),
+    return BlocProvider(
+      create: (context) => WelcomeBloc(),
       child: ScreenUtilInit(
         builder: (context, child) => const MaterialApp(
           debugShowCheckedModeBanner: false,
